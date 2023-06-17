@@ -7,13 +7,15 @@ const fecha = document.querySelector('.fecha')
 const invitacion = document.querySelector('.invitacion')
 const modalInvitacion = document.querySelector('.modalInvitacion')
 const modalContador = document.querySelector('.modalContador')
-const star = document.querySelector('.star')
+// const star = document.querySelector('.star')
 
-const mario = document.querySelector('.mario')
-const hongo = document.querySelector('.hongo')
-const luigi = document.querySelector('.luigi')
-const peach = document.querySelector('.peach')
-const bowser = document.querySelector('.bowser')
+const barbieRosa = document.querySelector('.barbieRosa')
+const barbieAzul = document.querySelector('.barbieAzul')
+const barbieAmarilla = document.querySelector('.barbieAmarilla')
+
+const pincelRosa = document.querySelector('.pincelRosa')
+const pincelAzul = document.querySelector('.pincelAzul')
+const pincelAmarillo = document.querySelector('.pincelAmarillo')
 
 const musicas = ['/audio/musica.mp3', '/audio/musica2.mp3', '/audio/musica3.mp3']
 const musica = new Audio(musicas[Math.floor(Math.random() * musicas.length)])
@@ -49,23 +51,21 @@ fecha.addEventListener('click', () => {
   star.classList.toggle('hidden')
 })
 
-mario.addEventListener('click', () => {
-  marioSound.play()
-  mario.classList.add('bounce-out-top')
+pincelRosa.addEventListener('click', () => {
+  // pincelRosaSound.play()
+  barbieRosa.classList.remove('hidden')
+  barbieAzul.classList.add('hidden')
+  barbieAmarilla.classList.add('hidden')
 })
-hongo.addEventListener('click', () => {
-  hongoSound.play()
-  hongo.classList.add('bounce-out-top')
+
+pincelAzul.addEventListener('click', () => {
+  barbieAzul.classList.remove('hidden')
+  barbieRosa.classList.add('hidden')
+  barbieAmarilla.classList.add('hidden')
 })
-luigi.addEventListener('click', () => {
-  luigiSound.play()
-  luigi.classList.add('bounce-out-top')
-})
-peach.addEventListener('click', () => {
-  peachSound.play()
-  peach.classList.add('bounce-out-top')
-})
-bowser.addEventListener('click', () => {
-  bowserSound.play()
-  bowser.classList.add('bounce-out-top')
+
+pincelAmarillo.addEventListener('click', () => {
+  barbieAmarilla.classList.remove('hidden')
+  barbieRosa.classList.add('hidden')
+  barbieAzul.classList.add('hidden')
 })
