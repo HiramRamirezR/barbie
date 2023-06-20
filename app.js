@@ -17,20 +17,27 @@ const pincelRosa = document.querySelector('.pincelRosa')
 const pincelAzul = document.querySelector('.pincelAzul')
 const pincelAmarillo = document.querySelector('.pincelAmarillo')
 
-const musicas = ['/audio/musica.mp3', '/audio/musica2.mp3', '/audio/musica3.mp3']
-const musica = new Audio(musicas[Math.floor(Math.random() * musicas.length)])
-const marioSound = new Audio('/audio/mario.mp3')
-const hongoSound = new Audio('/audio/hongo.mp3')
-const luigiSound = new Audio('/audio/luigi.mp3')
-const peaches = ['/audio/peach.mp3', '/audio/peach2.mp3']
-const peachSound = new Audio(peaches[Math.floor(Math.random() * peaches.length)])
-const bowsers = ['/audio/bowser.mp3', '/audio/bowser2.mp3']
-const bowserSound = new Audio(bowsers[Math.floor(Math.random() * bowsers.length)])
+const musica = new Audio('/audio/musica.mp3')
+const barbieSound = new Audio('/audio/barbie.mp3')
+const barbieSound2 = new Audio('/audio/barbie2.mp3')
+const barbieSound3 = new Audio('/audio/barbie3.mp3')
 
 play.addEventListener('click', () => {
   musica.play()
   aPlay.classList.add('hidden')
   aPause.classList.toggle('hidden')
+})
+
+barbieRosa.addEventListener('click', () => {
+  barbieSound.play()
+})
+
+barbieAzul.addEventListener('click', () => {
+  barbieSound2.play()
+})
+
+barbieAmarilla.addEventListener('click', () => {
+  barbieSound3.play()
 })
 
 pause.addEventListener('click', () => {
@@ -52,7 +59,6 @@ fecha.addEventListener('click', () => {
 })
 
 pincelRosa.addEventListener('click', () => {
-  // pincelRosaSound.play()
   barbieRosa.classList.remove('hidden')
   barbieAzul.classList.add('hidden')
   barbieAmarilla.classList.add('hidden')
